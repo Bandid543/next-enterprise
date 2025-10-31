@@ -1,8 +1,6 @@
 import { Metadata } from "next"
 import { Button } from "components/Button/Button"
-
 import { LP_GRID_ITEMS } from "lp-items"
-
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",
   twitter: {
@@ -23,6 +21,7 @@ export const metadata: Metadata = {
 export default function Web() {
   return (
     <>
+    
       <section className="bg-white dark:bg-gray-900">
         <div className="mx-auto grid max-w-(--breakpoint-xl) px-4 py-8 text-center lg:py-16">
           <div className="mx-auto place-self-center">
@@ -46,10 +45,13 @@ export default function Web() {
           </div>
         </div>
       </section>
+
+      
       <section className="bg-white dark:bg-gray-900">
         <div className="mx-auto max-w-(--breakpoint-xl) px-4 py-8 sm:py-16 lg:px-6">
-          <div className="justify-center space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
+          <div className="justify-center space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-2">
             {LP_GRID_ITEMS.map((singleItem) => (
+              
               <div key={singleItem.title} className="flex flex-col items-center justify-center text-center">
                 <div className="bg-primary-100 dark:bg-primary-900 mb-4 flex size-10 items-center justify-center rounded-full p-1.5 text-blue-700 lg:size-12">
                   {singleItem.icon}
@@ -57,6 +59,7 @@ export default function Web() {
                 <h3 className="mb-2 text-xl font-bold dark:text-white">{singleItem.title}</h3>
                 <p className="text-gray-500 dark:text-gray-400">{singleItem.description}</p>
               </div>
+              
             ))}
           </div>
         </div>
